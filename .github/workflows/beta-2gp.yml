@@ -14,12 +14,6 @@ jobs:
       - uses: cumulus-actions/release-beta-2gp@main
         with:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
-  beta-test:
-    name: "Beta Test"
-    needs:
-      - upload-beta-release-2gp
-    runs-on: ubuntu-latest
-    steps: 
       - uses: cumulus-actions/beta-test@main
         with:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
